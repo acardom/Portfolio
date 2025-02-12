@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.9/dist/cookieconsent.css" media="print" onload="this.media='all'">
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.9/dist/cookieconsent.js"></script>
+    <title>ud5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="">
+        <h1 id="saludo"></h1>
+        <p class="nombrados" id="sa"></p>
+        </br></br>
+        <p class="nombrados" id="genero"></p>
+        </br>
+        <p class="nombrados" id="acceso"></p>
+        </br>
+        <p class="nombrados" id="idioma"></p>
+        <button class="botons" type="button" onclick="cerrar_sesion()">Cerrar sesión</button>
+
+    </form>
+
+    <script src="login.js"></script>
+
+    <script>
+        var email = JSON.parse(localStorage["login"])["email"];
+        var nombre = JSON.parse(localStorage[email])["name"];
+        var apellidos = JSON.parse(localStorage[email])["surname"];
+        var contraseña = JSON.parse(localStorage[email])["password"];
+        var genero = JSON.parse(localStorage[email])["gender"];
+        var idioma = JSON.parse(localStorage[email])["languague"];
+        var datos = JSON.parse(localStorage[email])["data"];
+
+        if (idioma == "castellano"){
+            document.getElementById("saludo").innerHTML = "Hola, "+nombre+" "+apellidos;
+            document.getElementById("sa").innerHTML = "Esto es lo que sabemos de ti.";
+            document.getElementById("genero").innerHTML = "El genero con el que te identificas es "+genero;
+            document.getElementById("acceso").innerHTML = "Tu correo electrónico es "+email+" y tu contraseña tiene una longitud de "+contraseña.length+" caracteres";
+            document.getElementById("idioma").innerHTML = "Tu idioma preferido es el "+idioma+" y ("+datos+") has autorizado el uso de daots personales";
+        }
+
+        if (idioma == "ingles"){
+            document.getElementById("saludo").innerHTML = "Hello, "+nombre+" "+apellidos;
+            document.getElementById("sa").innerHTML = "This is what we know about you.";
+            document.getElementById("genero").innerHTML = "The gender you identify with is "+genero;
+            document.getElementById("acceso").innerHTML = "your email is "+email+" and your password has a length of "+contraseña.length+" characters";
+            document.getElementById("idioma").innerHTML = "Your preferred language is "+idioma+" and ("+datos+") you have authorized the use of personal data";
+        }
+
+        if (idioma == "frances"){
+            document.getElementById("saludo").innerHTML = "Salut, "+nombre+" "+apellidos;
+            document.getElementById("sa").innerHTML = "C'est ce que nous savons de vous.";
+            document.getElementById("genero").innerHTML = "Le sexe auquel vous vous identifiez est "+genero;
+            document.getElementById("acceso").innerHTML = "votre e-mail est "+email+" et votre mot de passe a une longueur de "+contraseña.length+" personnages";
+            document.getElementById("idioma").innerHTML = "Votre langue préférée est "+idioma+" Oui ("+datos+") vous avez autorisé l'utilisation des données personnelles";
+        }
+
+        if (idioma == "portugues"){
+            document.getElementById("saludo").innerHTML = "Olá, "+nombre+" "+apellidos;
+            document.getElementById("sa").innerHTML = "Isto é o que sabemos sobre você.";
+            document.getElementById("genero").innerHTML = "O gênero com o qual você se identifica é "+genero;
+            document.getElementById("acceso").innerHTML = "seu e-mail é "+email+" e sua senha tem um comprimento de "+contraseña.length+" personagens";
+            document.getElementById("idioma").innerHTML = "Seu idioma preferido é "+idioma+" y ("+datos+") você autorizou o uso de dados pessoais";
+        }
+
+    </script>
+
+</body>
+
+</html>

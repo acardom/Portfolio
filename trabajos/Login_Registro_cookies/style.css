@@ -1,0 +1,148 @@
+#div-cookies {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #24303c;
+    color: white;
+    box-shadow: 7px 13px 400px #000;
+    padding: 20px;
+    text-align: center;
+    z-index: 99;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('fondo.jpg');
+    background-size: cover;
+}
+
+form{
+    width: 600px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 8px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 70px;
+    margin-bottom: 16px;
+    border: 2px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+form a{
+    text-decoration: none;
+    color: white;
+}
+
+.enlace{
+    text-align: center;
+    font-size: 18px;
+}
+
+form a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.botons{
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    padding: 12px;
+    color: white;
+    background-color: #1f53c5;
+    margin: 16px 0;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botons_cookies{
+    color: white;
+    background-color: #1f53c5;
+    border: none;
+    width: 100%;
+    margin: 16px 0;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h2{
+    font-family: 'calibri';
+}
+
+h1{
+    font-family: 'calibri';
+}
+
+select{
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'calibri';
+    font-size: 16px;
+    background: #24303c;
+    color: white;
+    border: 2px solid #1f53c5;
+    padding: 10px;
+    border-radius: 70px;
+    margin-bottom: 16px;
+    margin-top: 10px;
+}
+
+.nombrados{
+    font-family: 'calibri';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nombrados_aviso{
+    font-family: 'calibri';
+    font-size: 15px;
+    color: rgb(253, 101, 101);
+   
+}
+
+.radio-form{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.label-radio{
+    font-family: 'calibri';
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.text-area{
+    font-family: 'calibri';
+    font-size: 16px;
+    background: #24303c;
+    color: white;
+    border: 2px solid #1f53c5;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    height: 110px;
+    pointer-events: none;
+}

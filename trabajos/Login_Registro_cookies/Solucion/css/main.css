@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 920px;
+}
+
+.error {
+    color: crimson;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+#loginSubmit {
+    margin-top: 20px;
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#newUser {
+    width: 450px;
+}
+
+#authContainer {
+    margin-top: 20px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+#personal,
+#pass {
+    display: flex;
+    justify-content: space-between;
+}
+
+#newUser #email {
+    width: 100%;
+}
+
+#genderLang {
+    display: flex;
+    justify-content: space-between;
+}
+
+#newUserSubmit {
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+}
+
+#userDetails {
+    width: 540px;
+}
+
+#userDetails button {
+    float: right;
+}
+
+.submitButton,
+.resetButton {
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    transition: 0.7s;
+    border-radius: 5px;
+}
+
+.submitButton {
+    background-color: dodgerblue;
+}
+
+.submitButton:hover {
+    background-color: rgb(15, 90, 165);
+    transition: 0.7s;
+}
+
+.resetButton {
+    background-color: darkgrey;
+}
+
+.resetButton:hover {
+    background-color: rgb(104, 104, 104);
+    transition: 0.7s;
+}
+
+#cookies {
+    font-size: 0.8em;
+    margin-top: 25px;
+    padding: 5px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#cookies div:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.acceptButton,
+.rejectButton {
+    color: white;
+    border: 0px;
+    transition: 0.7s;
+    border-radius: 2px;
+}
+
+.acceptButton {
+    background-color: dodgerblue;
+}
+
+.acceptButton:hover {
+    background-color: rgb(15, 90, 165);
+    transition: 0.7s;
+}
+
+.rejectButton {
+    background-color: darkgrey;
+}
+
+.rejectButton:hover {
+    background-color: rgb(104, 104, 104);
+    transition: 0.7s;
+}
+
+#cookies.hide {
+    opacity: 0;
+}

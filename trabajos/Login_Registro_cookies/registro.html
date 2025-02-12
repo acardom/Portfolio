@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.9/dist/cookieconsent.css" media="print" onload="this.media='all'">
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.9/dist/cookieconsent.js"></script>
+    <title>ud5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="" id="myForm">
+        <h2>Registro (datos personales)</h2>
+        
+        <br/><br/>
+        <p class="nombrados_aviso" id="nombre_error"></p>
+        <input class="controls" type="text" id="nombre" name="nombre" size="20" maxlength="100" placeholder="Ingrese su nombre">
+        <p class="nombrados_aviso" id="apellido_error"></p>
+        <input class="controls" type="text" id="apellidos" name="apellidos" size="20" maxlength="100" placeholder="Ingrese sus apellidos">
+        <p class="nombrados_aviso" id="passwd_error"></p>
+        <input class="controls" type="password" id="contraseña" name="contraseña" size="20" maxlength="100" placeholder="Ingrese contraseña">
+        <p class="nombrados_aviso" id="passwd_conf_error"></p>
+        <input class="controls" type="password" id="contraseñaConfirmar" name="contraseñaConfirmar" size="20" maxlength="100" placeholder="Confirme su contraseña">
+        <p class="nombrados_aviso" id="email_error"></p>
+        <input class="controls" type="email" name="gmail" id="gmail" size="60" maxlength="100" placeholder="Introduzca su correo electrónico"></br></br>
+
+        <label class="nombrados">Género</label><br>
+        <div class="radio-form">
+            <input type="radio" id="Femenino" name="genero" value="Femenino"> <label class="label-radio">Femenino</label>
+            <input type="radio" id="Masculino" name="genero" value="Masculino"> <label class="label-radio">Masculino</label> 
+            <input type="radio" id="NoBinario" name="genero" value="NoBinario" checked> <label class="label-radio">No binario</label> 
+        </div>
+
+        </br></br>
+
+        <label class="nombrados">Selecciona tu idoma</label></br>
+        <select name="idioma" id="idioma">
+            <option value="castellano">castellano</option>
+            <option value="ingles">inglés</option>
+            <option value="frances">francÉs</option>
+            <option value="portugues">portugués</option>
+        </select>
+
+        </br></br>
+
+        <label class="nombrados"><input type="checkbox" id="usoDatos" name="usoDatos" value="usoDatos"> Autorización para el uso de datos personales</label><br>
+        </br>
+        <textarea class="text-area" name="textarea" rows="10" cols="50" >Mediante este modelo de consentimiento el centro educativo podrá solicitar la autorización para tomar y usar imágenes y voz que se salgan de su función educativa.
+        </textarea>
+        </br></br>
+        <button class="botons" type="button" onclick="enviar_registro()">Confirmar</button>
+        <p class="enlace" ><a href="login.html">¿Ya tengo cuenta?</a></p>
+    </form>
+
+    <div id="div-cookies" style="display: none;">
+        <h2>Necesitamos usar cookies para que funcione todo. </h2></br>
+        <button class="botons_cookies" type="button" class="btn btn-sm btn-primary" onclick="acceptCookies()">
+            Acepto el uso de cookies
+        </button>
+        <button class="botons_cookies" type="button" class="btn btn-sm btn-primary" onclick="DenyCookies()">
+            Rechazar el uso de cookies
+        </button>
+    </div>
+
+    <SCript>
+
+        function checkAcceptCookies() {
+            if (localStorage.acceptCookies == 'true') { 
+                $('#div-cookies').hide();
+            } else {
+                $('#div-cookies').show();
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.acceptCookies = 'true';
+            $('#div-cookies').hide();
+        }
+        function DenyCookies() {
+            localStorage.acceptCookies = 'false';
+            $('#div-cookies').show();
+        }
+        $(document).ready(function () {
+            checkAcceptCookies();
+        });
+
+        function enviar_registro (){
+
+            if (localStorage.acceptCookies == 'true'){
+                let valido = true;
+                let nombre = document.getElementById("nombre").value;
+                let apellidos = document.getElementById("apellidos").value;
+                let contraseña = document.getElementById("contraseña").value;
+                let contraseñaConfirmar = document.getElementById("contraseñaConfirmar").value;
+                let email = document.getElementById("gmail").value;
+                var genero = document.querySelector('input[type=radio][name=genero]:checked').value;
+                let idioma = document.getElementById("idioma").value;
+                let usoDatos = "no";
+
+                if(nombre != ""){
+                    document.getElementById("nombre_error").innerHTML = "";
+                }else{
+                    document.getElementById("nombre_error").innerHTML = "· Nombre no introducido";
+                    valido = false;
+                }
+
+                if(apellidos != ""){
+                    document.getElementById("apellido_error").innerHTML = "";
+                }else{
+                    document.getElementById("apellido_error").innerHTML = "· Apellidos no introducidos";
+                    valido = false;
+                }
+
+                if (contraseña.match(/[A-Z]/) && contraseña.match(/[0-9]/) && contraseña.match(/[a-z]/) && contraseña.length >= 8) {
+                    document.getElementById("passwd_error").innerHTML = "";
+                } else {
+                    document.getElementById("passwd_error").innerHTML = "· Debe contener un minimo de 8 caracteres, numeros, mayusculas y minusculas";
+                    valido = false;
+                }
+
+                if (contraseña == contraseñaConfirmar){
+                    document.getElementById("passwd_conf_error").innerHTML = "";
+                }else{
+                    document.getElementById("passwd_conf_error").innerHTML = "· Las contraseñas no coinciden";
+                    valido = false;
+                }
+
+                var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+                var esValido = expReg.test(email);
+                if (esValido == true){
+                    document.getElementById("email_error").innerHTML = "";
+                }else{
+                    document.getElementById("email_error").innerHTML = "· El correo electronico es incorrecto";
+                    valido = false;
+                }
+
+                if( $('#usoDatos').prop('checked') ) {
+                    usoDatos = "si";
+                }
+
+                if (valido == true) {
+
+                    localStorage[email] = JSON.stringify({name: nombre, surname: apellidos, password: contraseña, email: email, gender: genero, languague: idioma, data: usoDatos});
+
+                    document.getElementById("myForm").submit();
+                    window.location="login.html";
+                }
+
+                
+            }
+            
+        }
+        
+
+    </SCript>
+</body>
+
+</html>

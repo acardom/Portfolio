@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.9/dist/cookieconsent.css" media="print" onload="this.media='all'">
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.9/dist/cookieconsent.js"></script>
+    <title>ud5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="">
+        <h1>Buenos días</h1>
+        <p class="nombrados">Introduce tus datos para continuar</p>
+        <br/><br/>
+        <p class="nombrados_aviso" id="email_error"></p>
+        <input class="controls" type="email" name="gmail" id="gmail" placeholder="Ingrese su correo electronico">
+        <p class="nombrados_aviso" id="contraseña_error"></p>
+        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+        <button class="botons" type="button" onclick="enviar_acceso()">Acceder</button>
+        <p class="enlace"><a href="registro.html">No tengo cuenta, quiero registrarme</a>       
+    </form>
+
+    <div id="div-cookies" style="display: none;">
+        <h2>Necesitamos usar cookies para que funcione todo. </h2></br>
+        <button class="botons_cookies" type="button" class="btn btn-sm btn-primary" onclick="acceptCookies()">
+            Acepto el uso de cookies
+        </button>
+        <button class="botons_cookies" type="button" class="btn btn-sm btn-primary" onclick="DenyCookies()">
+            Rechazar el uso de cookies
+        </button>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

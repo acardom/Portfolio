@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1'>
+    <title>Registro</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script src='js/cookieManager.js'></script>
+    <script src='js/common.js' defer></script>
+    <script src='js/new_user.js' defer></script>
+    <script src='js/cookieBanner.js' defer></script>
+</head>
+
+<body>
+    <h2>Registrar datos personales</h2>
+
+    <form id="newUser" name="newUser">
+        <div id="personal">
+            <div>
+                <p>Nombre</p>
+                <input type="text" id="name" name="name" class="field"><br />
+                <label id="nameError" class="error"></label>
+            </div>
+
+            <div>
+                <p>Apellidos</p>
+                <input type="text" id="lastName" name="lastName" class="field"><br />
+                <label id="lastNameError" class="error"></label>
+            </div>
+        </div>
+
+        <div id="pass">
+            <div>
+                <p>Contraseña</p>
+                <input type="password" id="password" name="password" class="field"><br />
+                <label id="passwordError" class="error"></label>
+            </div>
+            
+            <div>
+                <p>Confirmar contraseña</p>
+                <input type="password" id="passwordConfirm" name="passwordConfirm"><br />
+                <label id="passwordConfirmError" class="error"></label>
+            </div>
+        </div>
+
+        <div id="email">
+            <p>Email</p>
+            <input type="text" id="email" name="email" class="field"><br />
+            <label id="emailError" class="error"></label>
+        </div>
+
+        <div id="genderLang">
+            <div id="gender">
+                <p>Género</p>
+                <label for="gender1">Femenino</label>
+                <input type="radio" id="gender1" name="gender" value="f">
+                <label for="gender2">Masculino</label>
+                <input type="radio" id="gender2" name="gender" value="m">
+                <label for="gender3">No binario</label>
+                <input type="radio" id="gender3" name="gender" value="nb"><br />
+                <label class="error" id="genderError"></label>
+            </div>
+
+            <div id="lang">
+                <p>Idioma</p>
+                <select id="lang" name="lang">
+                    <option value="">Selecciona un idioma</option>
+                    <option value="es">Castellano</option>
+                    <option value="en">Inglés</option>
+                    <option value="fr">Francés</option>
+                </select><br />
+                <label id="langError" class="error" ></label>
+            </div>
+        </div>
+
+        <div id="authContainer">
+            <input type="checkbox" id="auth" name="auth" value="authorized">
+            <label for="auth">Autorización para el uso de datos personales</label>
+            <textarea
+                readonly>Lorem fistrum sexuarl hasta luego Lucas diodeno tiene musho peligro. Ese que llega se calle ustée ese que llega te va a hasé pupitaa ese hombree la caidita diodeno llevame al sircoo la caidita apetecan. Amatomaa papaar papaar amatomaa jarl benemeritaar torpedo apetecan me cago en tus muelas condemor ese que llega. Tiene musho peligro te va a hasé pupitaa ese que llega pupita llevame al sircoo. Por la gloria de mi madre jarl a gramenawer qué dise usteer me cago en tus muelas pecador quietooor. A wan pupita tiene musho peligro de la pradera tiene musho peligro.</textarea>
+        </div>
+
+        <div id="newUserSubmit">
+            <input type="reset" id="resetButton" class="resetButton">
+            <input type="submit" id="submitButton" class="submitButton">
+        </div>
+    </form>
+
+    <div id="cookies" class="hide">
+        <div>
+            <p>¿Acepta cookies?</p>
+            <button id="acceptButton" value="y" class="acceptButton">Sí</button>
+            <button id="rejectButton" value="n" class="rejectButton">No</button>
+        </div>
+        <div>
+            <p>
+                Lorem fistrum sexuarl hasta luego Lucas diodeno tiene musho peligro. Ese que llega se calle ustée ese
+                que llega te va a hasé pupitaa ese hombree la caidita diodeno llevame al sircoo la caidita apetecan.
+                Amatomaa papaar papaar amatomaa jarl benemeritaar torpedo apetecan me cago en tus muelas condemor ese
+                que llega. Tiene musho peligro te va a hasé pupitaa ese que llega pupita llevame al sircoo. Por la
+                gloria de mi madre jarl a gramenawer qué dise usteer me cago en tus muelas pecador quietooor. A wan
+                pupita tiene musho peligro de la pradera tiene musho peligro.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
