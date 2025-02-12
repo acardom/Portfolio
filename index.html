@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/codificacion.png" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript"> emailjs.init('Ba-S7RU2iZ2X2avfe') </script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div id="inicio"></div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#presentacion">Presentación</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#conocimientos">Conocimientos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="presentacion" class="section">
+        <div>
+            <h2 class="presentacion_cabecera">FULLSTACK DEVELOPER </h2>
+            <p>Hola, soy Alberto Cárdenas Domínguez, desarrollador Fullstack y técnico informático con formación en Desarrollo de Aplicaciones Web y Multiplataforma. Tengo experiencia en tecnologías como JavaScript, PHP, HTML, CSS, WordPress, MySQL ... y he trabajado en gestión y modificación de webs y mantenimiento de equipos informáticos. Busco nuevas oportunidades para aplicar mis habilidades y seguir creciendo profesionalmente.</p>
+        </div>
+        <img src="img/perfil.png" alt="Proyecto 1">
+        <button id="download-cv">Descargar CV</button>
+    </section>
+
+    <img src="img/banner_presentacion.png" alt="Proyecto 1" class="banner">
+
+    <section id="proyectos" class="section">
+        <h2>Proyectos</h2>
+        <div class="projects">
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <a href="img/Proyecto_vuelos.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/Proyecto_vuelos.png" alt="Proyecto 1">
+                    </a>
+                </div>
+                <div class="project-info">
+                    <h3>Web Vuelos</h3>
+                    <p>Una web con 3 páginas responsive y animaciones varias.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acardom/Html5-Css3/tree/main/Vuelos%20%2Bjs" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://tudominio.com/proyecto-vuelos" target="_blank"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Proyecto 2 -->
+            <div class="project-card card-reverse">
+                <div class="project-info">
+                    <h3>Web Cursos</h3>
+                    <p>Web con login para profesores y alumnos, donde se pueden publicar exámenes y cursos.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-php" title="PHP"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-sass" title="SASS"></i>
+                        <i class="fas fa-database" title="SQL"></i>
+                        <i class="fab fa-html5" title="HTML5"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acardom/proyecto_final_grado_DAW" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="videos/WebCursos.mp4" target="_blank"><i class="fas fa-video"></i></a>
+                    </div>
+                </div>
+                <div class="project-img">
+                    <a href="img/web_estudios.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/web_estudios.png" alt="Proyecto 2">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <a href="img/web_peliculas.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/web_peliculas.png" alt="Proyecto 3">
+                    </a>
+                </div>
+                <div class="project-info">
+                    <h3>Web Películas</h3>
+                    <p>Web que utiliza una API de películas con buscador y apartado de favoritos.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acardom/JavaScript/tree/main/Peliculas_Buscador_Favoritos" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://tudominio.com/proyecto-vuelos" target="_blank"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Proyecto 4 -->
+            <div class="project-card card-reverse">
+                <div class="project-info">
+                    <h3>Web Cookies</h3>
+                    <p>Login y registro con implementación de cookies.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acardom/JavaScript/tree/main/Login_Registro" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://tudominio.com/proyecto-vuelos" target="_blank"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+                <div class="project-img">
+                    <a href="img/coockies.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/coockies.png" alt="Proyecto 4">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Proyecto 5 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <a href="img/ChatBot.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/ChatBot.PNG" alt="Proyecto 5">
+                    </a>
+                </div>
+                <div class="project-info">
+                    <h3>ChatBot en Flutter</h3>
+                    <p>Implementación de un chatbot en Flutter mediante Rasa.</p>
+                    <div class="tech-icons">
+                        <i class="fas fa-mobile-alt" title="Flutter"></i>
+                        <i class="fas fa-robot" title="Rasa"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acardom/Html5-Css3/tree/main/gulp_prueba" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="videos/ChatBot.mp4" target="_blank"><i class="fas fa-video"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Proyecto 6 -->
+            <div class="project-card special-size card-reverse">
+                <div class="project-info">
+                    <h3>App Concesionario</h3>
+                    <p>App con slider, registro, login y listas de coches con sus características.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-android" title="Android Studio"></i>
+                        <i class="fab fa-java" title="Java"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acardom/AndroidStudio/tree/main/Java/Aplicacin_Temtica_Librews" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="videos/AppConcesionario.webm" target="_blank"><i class="fas fa-video"></i></a>
+                    </div>
+                </div>
+                <div class="project-img">
+                    <a href="img/app_movil_2.PNG" target="_blank" rel="noopener noreferrer">
+                        <img src="img/app_movil_2.PNG" alt="Proyecto 6">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Proyecto 7 -->
+            <div class="project-card special-size">
+                <div class="project-img">
+                    <a href="img/AppReactNative.PNG" target="_blank" rel="noopener noreferrer">
+                        <img src="img/AppReactNative.PNG" alt="Proyecto 7">
+                    </a>
+                </div>
+                <div class="project-info">
+                    <h3>App Rutas</h3>
+                    <p>App creada con React Native con navegación entre páginas, registro, login y mapa.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-react" title="React Native"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acardom/Html5-Css3/tree/main/gulp_prueba" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="videos/AppReactNative.webm" target="_blank"><i class="fas fa-video"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="conocimientos" class="section">
+        <h2>Mis Conocimientos</h2>
+        <div class="conocimientos-container">
+            <!-- Java -->
+            <div class="conocimiento-card">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+            </div>
+    
+            <!-- JavaScript -->
+            <div class="conocimiento-card">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+    
+            <!-- PhpMyAdmin -->
+            <div class="conocimiento-card">
+                <i class="fas fa-database"></i>
+                <span>PhpMyAdmin</span>
+            </div>
+    
+            <!-- PHP -->
+            <div class="conocimiento-card">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+            </div>
+    
+            <!-- XML -->
+            <div class="conocimiento-card">
+                <i class="fas fa-code"></i>
+                <span>XML</span>
+            </div>
+    
+            <!-- MVC -->
+            <div class="conocimiento-card">
+                <i class="fas fa-project-diagram"></i>
+                <span>MVC</span>
+            </div>
+    
+            <!-- GitHub -->
+            <div class="conocimiento-card">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </div>
+    
+            <!-- JSON -->
+            <div class="conocimiento-card">
+                <i class="fas fa-file-code"></i>
+                <span>JSON</span>
+            </div>
+    
+            <!-- HTML  -->
+            <div class="conocimiento-card">
+                <i class="fab fa-html5"></i>
+                <span>HTML 5</span>
+            </div>
+
+            <!-- CSS -->
+            <div class="conocimiento-card">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS 3</span>
+            </div>
+    
+            <!-- Bootstrap -->
+            <div class="conocimiento-card">
+                <i class="fab fa-bootstrap"></i>
+                <span>Bootstrap</span>
+            </div>
+    
+            <!-- Microsoft Office -->
+            <div class="conocimiento-card">
+                <i class="fab fa-microsoft"></i>
+                <span>Microsoft Office</span>
+            </div>
+    
+            <!-- PLSQL -->
+            <div class="conocimiento-card">
+                <i class="fas fa-database"></i>
+                <span>PL/SQL</span>
+            </div>
+    
+            <!-- WordPress -->
+            <div class="conocimiento-card">
+                <i class="fab fa-wordpress"></i>
+                <span>WordPress</span>
+            </div>
+    
+            <!-- Sistemas Microinformáticos y Redes -->
+            <div class="conocimiento-card">
+                <i class="fas fa-network-wired"></i>
+                <span>SMR</span>
+            </div>
+    
+            <!-- Visual Studio Code -->
+            <div class="conocimiento-card">
+                <i class="fas fa-code"></i>
+                <span>VS Code</span>
+            </div>
+    
+            <!-- VirtualBox -->
+            <div class="conocimiento-card">
+                <i class="fas fa-cube"></i>
+                <span>VirtualBox</span>
+            </div>
+    
+            <!-- NetBeans -->
+            <div class="conocimiento-card">
+                <i class="fas fa-code"></i>
+                <span>NetBeans</span>
+            </div>
+    
+            <!-- XAMPP -->
+            <div class="conocimiento-card">
+                <i class="fas fa-server"></i>
+                <span>XAMPP</span>
+            </div>
+    
+            <!-- Montaje y desmontaje PC -->
+            <div class="conocimiento-card">
+                <i class="fas fa-tools"></i>
+                <span>Hardware</span>
+            </div>
+    
+            <!-- Android Studio -->
+            <div class="conocimiento-card">
+                <i class="fab fa-android"></i>
+                <span>Android Studio</span>
+            </div>
+    
+            <!-- SASS -->
+            <div class="conocimiento-card">
+                <i class="fab fa-sass"></i>
+                <span>SASS</span>
+            </div>
+    
+            <!-- Gulp -->
+            <div class="conocimiento-card">
+                <i class="fab fa-gulp"></i>
+                <span>Gulp</span>
+            </div>
+
+            <div class="conocimiento-card">
+                <i class="fab fa-react"></i>
+                <span>React Native</span>
+            </div>
+            
+            <div class="conocimiento-card">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Flutter</span>
+            </div>
+            
+            <div class="conocimiento-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Unity</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <h2>Contáctame</h2>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="from_name" placeholder="Introduzca su nombre" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="from_email" placeholder="Introduzca su email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" placeholder="Hola buenas ..." required></textarea>
+            <button type="submit" class="ov-btn-grow-skew-reverse">Enviar Correo</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h3>Alberto Cárdenas Domínguez</h2>
+                <p>Desarrollador Fullstack</p>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="https://github.com/acardom" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/alberto-c%C3%A1rdeno-dom%C3%ADnguez-1798b6258/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contacto">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:cardenoalberto@gmail.com">cardenoalberto@gmail.com</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+34638000519">+34 638 000 519</a></li>
+                </ul>
+            </div>
+    
+            
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Alberto Cárdenas Domínguez</p>
+        </div>
+    </footer>
+
+    <a href="#inicio" class="to-top" id="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="scripts/contactar.js"></script>
+    <script src="scripts/inicio.js"></script>
+    <script src="scripts/descargar_cv.js"></script>
+    <script src="scripts/Texto_aparicion.js"></script>
+    <script src="scripts/Mostrar_imagen.js"></script>
+
+</body>
+</html>
