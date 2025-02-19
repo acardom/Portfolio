@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 html {
   scroll-behavior: smooth;
@@ -175,47 +176,6 @@ footer {
   padding: 20px;
 }
 
-@media (max-width: 768px) {
-  .project-img img {
-    width: 100%;
-    margin: 0%;
-    border-radius: 10px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
-    object-fit: cover;
-    transform: rotate(-3deg) perspective(500px) rotateX(10deg);
-    transition: transform 0.7s ease;
-  }
-  .project-info {
-    width: 100%;
-  }
-  .project-card {
-    flex-direction: column;
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-  .card-reverse {
-    flex-direction: column-reverse;
-  }
-  header h1 {
-    font-size: 2rem;
-  }
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  .projects {
-    flex-direction: column;
-  }
-  .project {
-    width: 90%;
-    margin: 10px auto;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-}
 button {
   background-color: #ff6347;
   border: none;
@@ -353,34 +313,6 @@ input, textarea {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  #presentacion {
-    text-align: center;
-    flex-direction: column;
-  }
-  #presentacion div {
-    width: 100%;
-  }
-  #presentacion img {
-    margin-top: 40px;
-    margin-bottom: 10px;
-    width: 300px;
-    height: 300px;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 #presentacion h2 {
   font-family: "Courier New", monospace;
   font-size: 2rem;
@@ -539,6 +471,134 @@ footer {
 
 .footer-container i {
   margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  #presentacion {
+    text-align: center;
+    flex-direction: column;
+  }
+  #presentacion div {
+    width: 100%;
+  }
+  #presentacion img {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container > div:not(:last-child) {
+    border-right: none;
+  }
+  .footer-container {
+    flex-direction: column;
+    width: 90%;
+  }
+  .project-img {
+    width: 80%;
+  }
+  .special-size .project-img img {
+    width: 80%;
+  }
+  .banner {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 50%;
+    object-fit: cover; /* Recorta la imagen para que cubra el área */
+    object-position: top; /* Alinea la imagen desde la parte superior */
+    margin-top: 130px;
+  }
+  .presentacion_cabecera {
+    font-size: 0.5em;
+  }
+  #conocimientos {
+    padding-bottom: 0px;
+    padding-top: 30px;
+  }
+  .conocimientos-container {
+    margin-top: 50px;
+  }
+  .conocimientos-container {
+    padding-bottom: 30px;
+  }
+  #proyectos {
+    margin-top: -100px;
+  }
+  #contact-form {
+    margin-top: 0px;
+  }
+  #contact-form label {
+    font-size: 1.3em;
+  }
+  #contact-form button {
+    font-size: 1.3em;
+  }
+  #contact-form input {
+    font-size: 1em;
+    height: 60px;
+  }
+  #contact-form textarea {
+    font-size: 1.3em;
+    height: 120px;
+    padding-top: 10px;
+  }
+  .project-img img {
+    width: 100%;
+    margin: 0%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    transform: rotate(-3deg) perspective(500px) rotateX(10deg);
+    transition: transform 0.7s ease;
+  }
+  .project-info {
+    width: 100%;
+  }
+  .project-card {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .card-reverse {
+    flex-direction: column-reverse;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .projects {
+    flex-direction: column;
+  }
+  .project {
+    width: 90%;
+    margin: 10px auto;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
