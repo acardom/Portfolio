@@ -472,7 +472,11 @@ footer {
 .footer-container i {
   margin-right: 8px;
 }
-
+@media (max-width: 1024px) {
+  #presentacion h2 {
+  font-size: 1.5rem;
+}
+}
 @media (max-width: 768px) {
   #presentacion {
     text-align: center;
@@ -502,6 +506,7 @@ footer {
     border-color: transparent;
   }
 }
+
 @media (max-width: 768px) {
   .footer-container > div:not(:last-child) {
     border-right: none;
@@ -526,9 +531,6 @@ footer {
     object-fit: cover; /* Recorta la imagen para que cubra el área */
     object-position: top; /* Alinea la imagen desde la parte superior */
     margin-top: 130px;
-  }
-  .presentacion_cabecera {
-    font-size: 0.5em;
   }
   #conocimientos {
     padding-bottom: 0px;
