@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 html {
   scroll-behavior: smooth;
@@ -69,7 +68,43 @@ nav ul li a:hover {
 }
 
 #presentacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: #f0f0f0;
+  padding: 40px;
+  text-align: left;
+  padding-top: 11%;
+  padding-bottom: 12%;
+}
+
+#presentacion div {
+  width: 40%;
+  margin-right: 4%;
+  text-align: left;
+}
+
+#presentacion img {
+  width: 200px;
+  height: 200px;
+  margin-right: 2%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#presentacion h2 {
+  font-family: "Courier New", monospace;
+  font-size: 2rem;
+  color: #002900;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 5px solid #002900;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 1.5s infinite;
+  max-width: fit-content;
+  padding-right: 10px;
 }
 
 #proyectos {
@@ -159,6 +194,24 @@ nav ul li a:hover {
   font-size: 1rem;
 }
 
+.project-info a {
+  font-size: 1.5rem;
+  color: #000000;
+  margin: 0 5px;
+  margin-top: 10px;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.project-info a i {
+  margin-top: 30px;
+}
+
+.project-info a i:hover {
+  color: #1795a8;
+  transform: rotate(360deg) scale(1.4);
+  transition: transform 1.2s ease;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -170,10 +223,67 @@ ul li {
 }
 
 footer {
-  background-color: #222;
+  background: linear-gradient(to bottom, #004d66, #002b3e);
   color: white;
   text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   padding: 20px;
+}
+
+.footer-container > div {
+  margin: 10px;
+  max-width: 300px;
+  padding: 10px;
+  text-align: left;
+}
+
+.footer-container > div:not(:last-child) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  padding-right: 70px;
+  margin-right: 70px;
+}
+
+.footer-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #6bd9e9;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-container ul li {
+  margin: 5px 0;
+}
+
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-container a:hover {
+  color: #6bd9e9;
+}
+
+.footer-bottom {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.footer-container i {
+  margin-right: 8px;
 }
 
 button {
@@ -215,7 +325,8 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
   width: 100%;
   padding: 2px 20px;
@@ -286,66 +397,8 @@ input, textarea {
   font-size: 40px;
 }
 
-#presentacion {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  padding: 40px;
-  text-align: left;
-  padding-top: 11%;
-  padding-bottom: 12%;
-}
-
-#presentacion div {
-  width: 40%;
-  margin-right: 4%;
-  text-align: left;
-}
-
-#presentacion img {
-  width: 200px;
-  height: 200px;
-  margin-right: 2%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-#presentacion h2 {
-  font-family: "Courier New", monospace;
-  font-size: 2rem;
-  color: #002900;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 5px solid #002900;
-  width: 0;
-  animation: typing 4s steps(40, end) forwards, blink 1.5s infinite;
-  max-width: fit-content;
-  padding-right: 10px;
-}
-
 .banner {
   width: 100%;
-}
-
-.project-info a {
-  font-size: 1.5rem;
-  color: #000000;
-  margin: 0 5px;
-  margin-top: 10px;
-  transition: color 0.3s ease-in-out, transform 0.2s;
-}
-
-.project-info a i {
-  margin-top: 30px;
-}
-
-.project-info a i:hover {
-  color: #1795a8;
-  transform: rotate(360deg) scale(1.4);
-  transition: transform 1.2s ease;
 }
 
 .conocimientos-container {
@@ -409,73 +462,26 @@ input, textarea {
   transition: all 0.4s;
 }
 
-footer {
-  background: linear-gradient(to bottom, #004d66, #002b3e);
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 14px;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-.footer-container > div {
-  margin: 10px;
-  max-width: 300px;
-  padding: 10px;
-  text-align: left;
-}
-
-.footer-container > div:not(:last-child) {
-  border-right: 2px solid rgba(255, 255, 255, 0.3);
-  padding-right: 70px;
-  margin-right: 70px;
-}
-
-.footer-container h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #6bd9e9;
-}
-
-.footer-container ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-container ul li {
-  margin: 5px 0;
-}
-
-.footer-container a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-container a:hover {
-  color: #6bd9e9;
-}
-
-.footer-bottom {
-  padding: 10px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.footer-container i {
-  margin-right: 8px;
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 @media (max-width: 1024px) {
   #presentacion h2 {
-  font-size: 1.5rem;
-}
+    font-size: 1.5rem;
+  }
+  .presentacion_cabecera {
+    font-size: 0.3em;
+  }
 }
 @media (max-width: 768px) {
   #presentacion {
@@ -491,31 +497,6 @@ footer {
     width: 300px;
     height: 300px;
   }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-
-@media (max-width: 1024px) {
-  .presentacion_cabecera {
-    font-size: 0.3em;
-  }
-}
-
-
-@media (max-width: 768px) {
   .footer-container > div:not(:last-child) {
     border-right: none;
   }
@@ -530,14 +511,14 @@ footer {
     width: 80%;
   }
   .banner {
-    width: 200%;
+    width: 100%;
     height: 100%;
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 50%;
-    object-fit: cover; /* Recorta la imagen para que cubra el área */
-    object-position: top; /* Alinea la imagen desde la parte superior */
+    object-fit: cover;
+    object-position: top;
     margin-top: 130px;
   }
   #conocimientos {
@@ -546,8 +527,6 @@ footer {
   }
   .conocimientos-container {
     margin-top: 50px;
-  }
-  .conocimientos-container {
     padding-bottom: 30px;
   }
   #proyectos {
