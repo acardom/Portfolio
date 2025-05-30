@@ -507,15 +507,14 @@ footer {
   }
 }
 
-<<<<<<< HEAD
-=======
+
 @media (max-width: 1024px) {
   .presentacion_cabecera {
     font-size: 0.3em;
   }
 }
 
->>>>>>> d86ce5520ddde8b8870d206916ab4c50bca6f5ae
+
 @media (max-width: 768px) {
   .footer-container > div:not(:last-child) {
     border-right: none;
