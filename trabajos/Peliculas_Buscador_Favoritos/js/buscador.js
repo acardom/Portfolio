@@ -3,18 +3,27 @@ const results = document.querySelector("#results");
 const movieInfo = document.querySelector("#movieInfo");
 
 searchBox.addEventListener("input", function () {
-    const searchTerm = searchBox.value;
+    const searchTerm = searchBox.value.trim();
     if (searchTerm.length > 2) {
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=433dc46d016e3d1127f8f04959e9a42a&query=${searchTerm}&language=es-ES`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=433dc46d016e3d1127f8f04959e9a42a&query=${encodeURIComponent(searchTerm)}&language=es-ES`)
             .then(response => response.json())
             .then(data => {
-
                 results.innerHTML = "";
                 movieInfo.innerHTML = "";
 
-                data.results.forEach(movie => {
+                if (data.results.length === 0) {
+                  results.innerHTML = `<li style="color:#ccc;cursor:default;">Sin resultados</li>`;
+                  return;
+                }
+
+                data.results.slice(0, 8).forEach(movie => {
                     const listItem = document.createElement("li");
-                    listItem.innerText = movie.title;
+                    listItem.innerHTML = `
+                      <div style="display:flex;align-items:center;gap:15px;">
+                        <img src="https://image.tmdb.org/t/p/w92${movie.poster_path || ''}" alt="${movie.title}" style="width:40px;height:60px;object-fit:cover;border-radius:6px;background:#333;">
+                        <span>${movie.title}</span>
+                      </div>
+                    `;
                     listItem.addEventListener("click", function () {
                         showMovie(movie.id);
                         results.innerHTML = "";
@@ -22,7 +31,7 @@ searchBox.addEventListener("input", function () {
                     results.appendChild(listItem);    
                 });
             });
-    }else{
+    } else {
         results.innerHTML = "";
         movieInfo.innerHTML = "";
     }
@@ -36,16 +45,19 @@ function showMovie(movieId) {
         .then(data => {
             console.log(data);
             movieInfo.innerHTML = `
-                <div class="movie-card">
-                  <h2>${data.title}</h2>
-                  <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}">
-                  <div class="movie-details">
-                    <p>Fecha de lanzamiento: ${data.release_date}</p>
-                    <p>Valoración: ${data.vote_average}</p>
-                    <p>Idioma original: ${data.original_language}</p>
+                <div class="movie-card" style="max-width:400px;margin:0 auto;">
+                  <h2 style="text-align:center;">${data.title}</h2>
+                  <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" style="margin:0 auto;display:block;border-radius:10px;">
+                  <div class="movie-details" style="text-align:center;">
+                  <br/>
+                    <p><strong>Fecha de lanzamiento:</strong> ${data.release_date}</p>
+                    <p><strong>Valoración:</strong> ${data.vote_average}</p>
+                    <p><strong>Idioma original:</strong> ${data.original_language}</p>
                   </div>
-                  <p>Descripción: ${data.overview}</p>
-                  <input name="favourite" type="button" id="${data.id}" onclick="favourite(${data.id})" value=🤍>
+                  <p style="padding:10px 15px;text-align:justify;">${data.overview}</p>
+                  <div style="display:flex;justify-content:center;gap:20px;margin-bottom:10px;">
+                    <input name="favourite" type="button" id="${data.id}" onclick="favourite(${data.id})" value="🤍" style="font-size:2rem;background:none;border:none;cursor:pointer;color:#e50914;transition:transform 0.2s;">
+                  </div>
                 </div>
               `;
         
